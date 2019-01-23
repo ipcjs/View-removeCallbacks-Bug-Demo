@@ -4,6 +4,10 @@ import android.util.Log
 
 object L {
     inline fun d(block: () -> String) {
-        Log.d("View-Bug-Demo", block())
+        Log.d("setShowWithDelay", block())
     }
+    inline fun w(block: () -> String) {
+        Log.w("setShowWithDelay", block())
+    }
+
 }

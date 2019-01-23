@@ -17,12 +17,23 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-        <Button
+        <TextView
+                android:padding="8dp"
                 android:text="Open Next"
+                android:layout_margin="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
                 android:onClick="onOpenNextClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+        <Button
+                android:text="show/hide ProgressBar"
+                android:onClick="onShowHideProgressBarClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
     </LinearLayout>

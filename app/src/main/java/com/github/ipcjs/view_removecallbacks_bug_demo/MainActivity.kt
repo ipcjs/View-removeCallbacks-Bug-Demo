@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.core.view.isVisible
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,6 +24,12 @@ class MainActivity : BaseActivity() {
 
     fun onOpenNextClick(v: View) {
         startActivity(Intent(context, NextActivity::class.java))
+    }
+
+    fun onShowHideProgressBarClick(v: View) {
+        findViewById<View>(R.id.progressBar).let {
+            it.isVisible = !it.isVisible
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
